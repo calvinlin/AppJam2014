@@ -59,9 +59,4 @@ public class TitleActivity extends Activity implements OnClickListener{
 		}
 		
 	}
-
-	
-
-
-
 }
