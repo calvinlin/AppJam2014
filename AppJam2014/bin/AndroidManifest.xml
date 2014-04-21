@@ -15,12 +15,17 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.appjam2014.TitleActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.appjam2014.EndActivity"
+            android:label="@string/title_activity_end" >
         </activity>
     </application>
 

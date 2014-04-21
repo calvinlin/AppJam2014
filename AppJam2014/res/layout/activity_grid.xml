@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GridBGColor"
+    android:orientation="vertical"
+    tools:context="com.example.appjam2014.GridActivity" >
+
+    <TextView
+        android:id="@+id/MySentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:text="@string/MySentenceLabel"
+        android:textSize="15sp" />
+
+    <!-- need to add sentence -->
+
+    <Button
+        android:id="@+id/NextButton"
+        style="@style/NextButtonText"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:background="@drawable/nextbutton"
+        android:text="@string/NextButtonLabel" />
+
+<!--     <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingTop="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="50dp" >
+    </GridView> -->
+
+    <GridView
+    android:id="@+id/gridView1"
+    android:numColumns="3"
+    android:gravity="center"
+    android:columnWidth="100dp"
+    android:stretchMode="columnWidth"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+</GridView>
+</LinearLayout>

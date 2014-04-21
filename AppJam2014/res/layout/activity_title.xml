@@ -1,7 +1,65 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.appjam2014.TitleActivity"
-    tools:ignore="MergeRootFrame" />
+    android:background="@color/TitleBGColor"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    tools:context="com.example.appjam2014.TitleActivity" >
+
+<!--     <ImageView
+        android:id="@+id/keylifeplanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/keylifeplanner" /> -->
+
+    <Button
+        android:id="@+id/QuestionButton"
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/purplebutton"
+        android:text="@string/QuestionButtonLabel" />
+
+    <Button
+        android:id="@+id/WantButton"
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bluebutton"
+        android:text="@string/WantButtonLabel" />
+
+    <Button
+        android:id="@+id/StatementButton"
+        style="@style/ButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/greenbutton"
+        android:text="@string/StatementButtonLabel" />
+
+    <FrameLayout
+        android:id="@+id/mLlayoutBottomButton"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/EmergencyButton"
+            style="@style/EmergencyButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/redbutton"
+            android:longClickable="false"
+            android:text="@string/EmergencyButtonLabel" />
+
+    </FrameLayout>
+
+</LinearLayout>
