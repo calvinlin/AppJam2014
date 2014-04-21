@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/EndBGColor"
+    android:orientation="vertical"
     tools:context="com.example.appjam2014.EndActivity" >
-    
+
     <TextView
         android:id="@+id/MySentence"
         android:layout_width="wrap_content"
@@ -16,6 +16,19 @@
         android:textSize="17sp" />
 
     <!-- need to add sentence -->
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingTop="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="50dp" >
+    </GridView>
 
     <Button
         android:id="@+id/SayButton"

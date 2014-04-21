@@ -17,7 +17,8 @@ public class ImageAdapter extends BaseAdapter {
 		this.context = context;
 		this.moduleValues = moduleValues;
 	}
- 
+
+	/*
 	public View getView(int position, View convertView, ViewGroup parent) {
  
 		LayoutInflater inflater = (LayoutInflater) context
@@ -60,6 +61,7 @@ public class ImageAdapter extends BaseAdapter {
 		return gridView;
 	}
  
+ */
 	@Override
 	public int getCount() {
 		return moduleValues.length;
@@ -73,6 +75,13 @@ public class ImageAdapter extends BaseAdapter {
 	@Override
 	public long getItemId(int position) {
 		return 0;
+	}
+
+	//DELETE
+	@Override
+	public View getView(int arg0, View arg1, ViewGroup arg2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
  
 }

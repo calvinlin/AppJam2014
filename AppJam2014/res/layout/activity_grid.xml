@@ -17,16 +17,34 @@
 
     <!-- need to add sentence -->
 
-    <Button
-        android:id="@+id/NextButton"
-        style="@style/NextButtonText"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_gravity="right"
-        android:background="@drawable/nextbutton"
-        android:text="@string/NextButtonLabel" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" >
 
-<!--     <GridView
+        <TextView
+            android:id="@+id/GridInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/MySentenceLabel"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/NextButton"
+            style="@style/NextButtonText"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/nextbutton"
+            android:text="@string/NextButtonLabel" />
+    </RelativeLayout>
+
+    <!--
+         <GridView
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -37,16 +55,17 @@
         android:paddingTop="10dp"
         android:stretchMode="columnWidth"
         android:verticalSpacing="50dp" >
-    </GridView> -->
+    </GridView>
+    -->
 
     <GridView
-    android:id="@+id/gridView1"
-    android:numColumns="3"
-    android:gravity="center"
-    android:columnWidth="100dp"
-    android:stretchMode="columnWidth"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
- 
-</GridView>
+        android:id="@+id/gridView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
 </LinearLayout>
