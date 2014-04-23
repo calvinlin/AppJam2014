@@ -113,4 +113,7 @@ public class EndActivity extends Activity implements OnClickListener, OnInitList
 	        Toast.makeText(this, "Sorry! Text To Speech failed...", Toast.LENGTH_LONG).show();
 	    }
 	}
+	
+	
+	
 }
