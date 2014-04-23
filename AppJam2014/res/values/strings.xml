@@ -55,10 +55,14 @@
     </style>
 
     <string name="MySentenceLabel">My sentence:</string>
+    <string name="UserSentenceLabel">Here is a random sentence the user will create...</string>
+    <string name="SentenceInstruction">Insert something...</string>
     <string name="NextButtonLabel">NEXT</string>
+    <string name="IconLabel">iconName</string>
     
     
     <string name="title_activity_end">EndActivity</string>
+    <string name="title_activity_grid">GridActivity</string>
     <string name="SayLabel">SAY FOR ME</string>
     <string name="AgainLabel">NEW SENTENCE</string>
     

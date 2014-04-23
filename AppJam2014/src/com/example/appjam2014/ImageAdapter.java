@@ -18,7 +18,7 @@ public class ImageAdapter extends BaseAdapter {
 		this.moduleValues = moduleValues;
 	}
 
-	/*
+	
 	public View getView(int position, View convertView, ViewGroup parent) {
  
 		LayoutInflater inflater = (LayoutInflater) context
@@ -44,15 +44,15 @@ public class ImageAdapter extends BaseAdapter {
  
 			String mobile = moduleValues[position];
  
-			if (mobile.equals("Windows")) {
-				imageView.setImageResource(R.drawable.windows_logo);
-			} else if (mobile.equals("iOS")) {
-				imageView.setImageResource(R.drawable.ios_logo);
-			} else if (mobile.equals("Blackberry")) {
-				imageView.setImageResource(R.drawable.blackberry_logo);
-			} else {
-				imageView.setImageResource(R.drawable.android_logo);
-			}
+//			if (mobile.equals("Windows")) {
+//				imageView.setImageResource(R.drawable.windows_logo);
+//			} else if (mobile.equals("iOS")) {
+//				imageView.setImageResource(R.drawable.ios_logo);
+//			} else if (mobile.equals("Blackberry")) {
+//				imageView.setImageResource(R.drawable.blackberry_logo);
+//			} else {
+//				imageView.setImageResource(R.drawable.android_logo);
+//			}
  
 		} else {
 			gridView = (View) convertView;
@@ -61,7 +61,6 @@ public class ImageAdapter extends BaseAdapter {
 		return gridView;
 	}
  
- */
 	@Override
 	public int getCount() {
 		return moduleValues.length;
@@ -77,11 +76,5 @@ public class ImageAdapter extends BaseAdapter {
 		return 0;
 	}
 
-	//DELETE
-	@Override
-	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
  
 }

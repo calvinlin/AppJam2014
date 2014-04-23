@@ -19,29 +19,30 @@ import android.widget.AdapterView.OnItemClickListener;
 public class GridActivity extends Activity {
 
 	GridView gv;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid);
-		
-		final String[] MOBILE_OS = new String[] { 
-			"Android", "iOS","Windows", "Blackberry" };
-		
-		gv = (GridView) findViewById(R.id.gridView1);
-		 
-		gv.setAdapter(new ImageAdapter(this, MOBILE_OS));
- 
-		gv.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View v,
-					int position, long id) {
-				Toast.makeText(
-				   getApplicationContext(),
-				   ((TextView) v.findViewById(R.id.grid_item_label))
-				   .getText(), Toast.LENGTH_SHORT).show();
- 
-			}
-		});
+
+//		int category = 0;
+//		final String[] s = Data.getArray(category);
+//
+//		gv = (GridView) findViewById(R.id.gridView1);
+//
+//		gv.setAdapter(new ImageAdapter(this, s));
+//
+//		gv.setOnItemClickListener(new OnItemClickListener() 
+//		{
+//			public void onItemClick(AdapterView<?> parent, View v,
+//					int position, long id) {
+//				//Data.setItem((TextView) v.findViewById(R.id.grid_item_label)).getText();
+//				Toast.makeText(
+//						getApplicationContext(),
+//						((TextView) v.findViewById(R.id.grid_item_label))
+//						.getText(), Toast.LENGTH_SHORT).show();
+//			}
+//		});
 	}
 
 }

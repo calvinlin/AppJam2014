@@ -27,6 +27,10 @@
             android:name="com.example.appjam2014.EndActivity"
             android:label="@string/title_activity_end" >
         </activity>
+        <activity
+            android:name="com.example.appjam2014.GridActivity"
+            android:label="@string/title_activity_grid" >
+        </activity>
     </application>
 
 </manifest>
