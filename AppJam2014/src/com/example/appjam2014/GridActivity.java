@@ -2,6 +2,8 @@ package com.example.appjam2014;
 
 import java.io.Serializable;
 
+import com.example.appjam2014.Data.Q01;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -9,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.widget.AdapterView;
@@ -22,6 +23,10 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class GridActivity extends Activity implements OnClickListener, Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	GridView gv;
 	Sentence sentence = new Sentence();
 	Data d;
@@ -29,6 +34,7 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 	String info = "info";
 	int category = 0;
 	int variation = 0;
+	String variationName = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +51,14 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		TextView sent = (TextView)findViewById(R.id.CurrentSentence);
 		TextView instruction = (TextView)findViewById(R.id.GridInstructions);
 
-		sentence.sendSentence(Data.WANT01.getFragments());
+		getInfo(category, variation);
 		sent.setText(sentence.getString());
 		instruction.setText("Pick a word:");
 		
 		Button next = (Button)findViewById(R.id.NextButton);
 		next.setOnClickListener(this);
 		
-//		String[] s = d.getAll("something");
+//		String[] s = Data.getAll("something");
 //
 //		gv = (GridView) findViewById(R.id.gridView1);
 //
@@ -86,41 +92,43 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 			startActivity(i);
 		}
 	}
-	
+
 	public String getInfo(int category, int variation)
 	{
 		String stuff = "";
 		
+		// for each variation, the sentence object was updated with the starter 
+		// fragment info using sendSentence().
 		switch(category)
 		{
 		case 1:	//question
 			switch(variation)
 			{
-			case 1: 
-			case 2:
-			case 3:
-			case 4:
+				case 1: sentence.sendSentence(Data.Q01.getFragments()); break;
+				case 2: sentence.sendSentence(Data.Q02.getFragments()); break;
+				case 3: sentence.sendSentence(Data.Q03.getFragments()); break;
+				case 4: sentence.sendSentence(Data.Q04.getFragments()); break;
 			}
 			break;
 		case 2:	//want
 			switch(variation)
 			{
-			case 1:
-			case 2:
-			case 3:
+				case 1: sentence.sendSentence(Data.WANT01.getFragments()); break;
+				case 2: sentence.sendSentence(Data.WANT02.getFragments()); break;
+				case 3: sentence.sendSentence(Data.WANT03.getFragments()); break;
 			}
 			break;
 		case 3:	//statement
 			switch(variation)
 			{
-			case 1:
-			case 2:
+				case 1: sentence.sendSentence(Data.STATE01.getFragments()); break;
+				case 2: sentence.sendSentence(Data.STATE02.getFragments()); break;
 			}
 			break;
 		case 4:	//emergency
 			switch(variation)
 			{
-			case 1:
+				case 1: sentence.sendSentence(Data.HELP01.getFragments()); break;
 			}
 			break;
 		}

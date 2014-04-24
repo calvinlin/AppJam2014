@@ -1,6 +1,7 @@
 package com.example.appjam2014;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Data {
 	static People people;
@@ -24,7 +25,6 @@ public class Data {
 			s = new String[People.values().length];
 			for(int i = 0; i< People.values().length;i++)
 				s[i] = People.values()[i].toString();
-
 		}
 		else if(name.equals("places"))
 		{
@@ -56,7 +56,22 @@ public class Data {
 			for(int i = 0; i< Actions.values().length;i++)
 				s[i] = Actions.values()[i].toString();
 		}
+		else if(name.equals("event"))
+		{
+			s = new String[Event.values().length];
+			for(int i = 0; i< Event.values().length;i++)
+				s[i] = Event.values()[i].toString();
+		}
 		return s;
+	}
+	public static String[] joinArray(ArrayList<String[]> arrays)
+	{
+		ArrayList<String> combinedArray = new ArrayList<String>();
+		for(String[] array: arrays)
+		{
+			combinedArray.addAll(new ArrayList<String>(Arrays.asList(array)));
+		}
+		return (String[]) combinedArray.toArray();
 	}
 	public enum WANT01{
 		INEED("I need");
@@ -112,7 +127,7 @@ public class Data {
 		public static ArrayList<String> getFragments()
 		{
 			ArrayList<String> fragments = new ArrayList<String>();
-			for(WANT01 fragEnum: WANT01.values())
+			for(WANT02 fragEnum: WANT02.values())
 			{
 				fragments.add(fragEnum.getFragString());
 			}
@@ -141,13 +156,229 @@ public class Data {
 		public static ArrayList<String> getFragments()
 		{
 			ArrayList<String> fragments = new ArrayList<String>();
-			for(WANT01 fragEnum: WANT01.values())
+			for(WANT03 fragEnum: WANT03.values())
 			{
 				fragments.add(fragEnum.getFragString());
 			}
 			return fragments;
 		}
 	};
+	public enum Q01{
+		WHEREIS("Where is"),
+		QMARK("?");
+		
+		private String template;
+		Q01(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			ArrayList<String[]> wordArrays = new ArrayList<String[]>();
+			wordArrays.add(getAll("people"));
+			wordArrays.add(getAll("places"));
+			wordArrays.add(getAll("objects"));
+			return joinArray(wordArrays);
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(Q01 fragEnum: Q01.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	public enum Q02{
+		WHATIS("What is"),
+		QMARK("?");
+		
+		private String template;
+		Q02(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			ArrayList<String[]> wordArrays = new ArrayList<String[]>();
+			wordArrays.add(getAll("places"));
+			wordArrays.add(getAll("objects"));
+			return joinArray(wordArrays);
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(Q02 fragEnum: Q02.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	public enum Q03{
+		WHO("Who is"),
+		QMARK("?");
+		
+		private String template;
+		Q03(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+;
+			return getAll("people");
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(Q03 fragEnum: Q03.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	public enum Q04{
+		WHEN("When is"),
+		QMARK("?");
+		
+		private String template;
+		Q04(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			return getAll("event");
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(Q04 fragEnum: Q04.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	public enum STATE01{
+		IFEEL("I feel");
+		
+		private String template;
+		STATE01(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			return getAll("feelings");
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(STATE01 fragEnum: STATE01.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	public enum STATE02{
+		IAM("I am");
+		
+		private String template;
+		STATE02(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			return getAll("feelings");
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(STATE02 fragEnum: STATE02.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	public enum HELP01{
+		MY("my"),
+		HURTS("hurts");
+		
+		private String template;
+		HELP01(String template)
+		{
+			this.template = template;
+		}
+		
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private static String[] getAvailableWords()
+		{
+			return getAll("bodyparts");
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(HELP01 fragEnum: HELP01.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+	};
+	
+	
 };
 
 
@@ -169,7 +400,20 @@ enum BodyParts {
 };
 
 enum Objects {
-	toy, phone, pencil, laptop, jacket, shirt, shoe, underwear, waterBottle, pieceOfPaper, book
+	toy, phone, pencil, laptop, jacket, shirt, shoe, underwear, waterBottle("water bottle"), pieceOfPaper, book;
+	private String objName;
+	Objects(String name)
+	{
+		objName = name;
+	}
+	// IMPLEMENT **********************************
+	Objects()
+	{
+		objName = "";
+	}
+	String getName(){
+		return objName;
+	}
 };
 
 enum Actions {
