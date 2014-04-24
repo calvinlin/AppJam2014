@@ -66,20 +66,34 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">2</item>
     </style>
+    
+      <style name="VariationButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
 
-    <string name="title_activity_grid">GridActivity</string>
+<!--     <string name="title_activity_grid">GridActivity</string> -->
     <string name="MySentenceLabel">My sentence:</string>
     <string name="UserSentenceLabel">Here is a random sentence the user will create...</string>
     <string name="SentenceInstruction">Insert something...</string>
     <string name="NextButtonLabel">NEXT</string>
     <string name="IconLabel">iconName</string>
-    <string name="title_activity_end">EndActivity</string>
+<!--     <string name="title_activity_end">EndActivity</string> -->
     <string name="SayLabel">SAY FOR ME</string>
     <string name="AgainLabel">NEW SENTENCE</string>
-    <string name="title_activity_want">WantActivity</string>
+<!--     <string name="title_activity_want">WantActivity</string>
     <string name="title_activity_statement">StatementActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_emergency">EmergencyActivity</string>
-    <string name="title_activity_question">QuestionActivity</string>
+    <string name="title_activity_question">QuestionActivity</string> -->
 
 </resources>

@@ -38,6 +38,7 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		Intent i = getIntent();
 		category = (Integer) i.getSerializableExtra("category");
 		variation = (Integer) i.getSerializableExtra("variation");
+		Toast t = 
 		
 		
 		TextView sent = (TextView)findViewById(R.id.CurrentSentence);
