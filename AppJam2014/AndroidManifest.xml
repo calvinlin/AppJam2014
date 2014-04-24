@@ -8,6 +8,9 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -30,6 +33,22 @@
         <activity
             android:name="com.example.appjam2014.GridActivity"
             android:label="@string/title_activity_grid" >
+        </activity>
+        <activity
+            android:name="com.example.appjam2014.WantActivity"
+            android:label="@string/title_activity_want" >
+        </activity>
+        <activity
+            android:name="com.example.appjam2014.StatementActivity"
+            android:label="@string/title_activity_statement" >
+        </activity>
+        <activity
+            android:name="com.example.appjam2014.EmergencyActivity"
+            android:label="@string/title_activity_emergency" >
+        </activity>
+        <activity
+            android:name="com.example.appjam2014.QuestionActivity"
+            android:label="@string/title_activity_question" >
         </activity>
     </application>
 

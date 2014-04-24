@@ -38,23 +38,19 @@ public class TitleActivity extends Activity implements OnClickListener{
 		switch(v.getId())
 		{
 		case R.id.QuestionButton:
-//			i = new Intent(this, QuestionActivity.class);
-			i = new Intent(this, GridActivity.class);
+			i = new Intent(this, QuestionActivity.class);
 			startActivity(i);
 			break;
 		case R.id.WantButton:
-//			i = new Intent(this, WantActivity.class);
-//			startActivity(i);
-//			break;
+			i = new Intent(this, WantActivity.class);
+			startActivity(i);
+			break;
 		case R.id.StatementButton:
-//			i = new Intent(this, StatementActivity.class);
-//			startActivity(i);
-//			break;
+			i = new Intent(this, StatementActivity.class);
+			startActivity(i);
+			break;
 		case R.id.EmergencyButton:
-//			i = new Intent(this, EmergencyActivity.class);
-//			startActivity(i);
-//			break;
-			i = new Intent(this, EndActivity.class);
+			i = new Intent(this, EmergencyActivity.class);
 			startActivity(i);
 			break;
 		}

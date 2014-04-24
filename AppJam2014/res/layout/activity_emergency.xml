@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/GridBGColor"
+    android:orientation="vertical"
+    tools:context="com.example.appjam2014.EmergencyActivity" >
+
+    <TextView
+        android:id="@+id/GridInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SentenceInstruction"
+        android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/HurtButton"
+            style="@style/NextButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/nextbutton"
+            android:text="@string/HurtLabel" />
+
+        <Button
+            android:id="@+id/CallButton"
+            style="@style/NextButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/nextbutton"
+            android:text="@string/CallLabel" />
+
+</LinearLayout>

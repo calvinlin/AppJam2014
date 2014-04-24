@@ -15,7 +15,7 @@ public class Data {
 	};
 
 	Actions action;
-	
+
 	//NOT COMPLETE FOR EVERY ENUM
 	//Returns a String[] of all of the options given an enum
 	public String[] getAll(String name)
@@ -28,7 +28,7 @@ public class Data {
 			{
 				s[i] =people.values()[i].toString();
 				System.out.println(people.values()[i]);
-				
+
 			}
 		}
 		else if(name.equals("place"))
@@ -38,42 +38,43 @@ public class Data {
 			{
 				s[i] =place.values()[i].toString();
 				System.out.println(place.values()[i]);
-				
+
 			}
 		}
 		return s;
 	}
+	public enum WANT01{
+		INEED("I need");
+
+		private String template;
+		WANT01(String template)
+		{
+			this.template = template;
+		}
+
+		public String getFragString()
+		{
+			return template;
+		}
+		// returns the Enum of stuff that is appropriate for this template.
+		private String getAvailableWords()
+		{
+			return "food";
+		}
+		public static ArrayList<String> getFragments()
+		{
+			ArrayList<String> fragments = new ArrayList<String>();
+			for(WANT01 fragEnum: WANT01.values())
+			{
+				fragments.add(fragEnum.getFragString());
+			}
+			return fragments;
+		}
+
+	};
 };
 
-enum WANT01{
-	INEED("I need");
-	
-	private String template;
-	WANT01(String template)
-	{
-		this.template = template;
-	}
-	
-	public String getFragString()
-	{
-		return template;
-	}
-	// returns the Enum of stuff that is appropriate for this template.
-	private String getAvailableWords()
-	{
-		return "food";
-	}
-	public ArrayList<String> getFragments()
-	{
-		ArrayList<String> fragments = new ArrayList<String>();
-		for(WANT01 fragEnum: WANT01.values())
-		{
-			fragments.add(fragEnum.getFragString());
-		}
-		return fragments;
-	}
-	
-};
+
 
 enum People {
 	me, you, him, her, teacher, student, mom, dad, friend, neighbor

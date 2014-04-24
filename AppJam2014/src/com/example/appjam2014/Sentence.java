@@ -44,4 +44,10 @@ public class Sentence
 	{
 		return createdString;
 	}
+	
+	//resets the sentence
+	public void resetSentence()
+	{
+		createdString = "";
+	}
 }

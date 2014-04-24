@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GridBGColor"
+    android:orientation="vertical"
+    tools:context="com.example.appjam2014.QuestionActivity" >
+
+    <TextView
+        android:id="@+id/Instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:text="@string/MySentenceLabel"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/LocationButton"
+        style="@style/NextButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/nextbutton"
+        android:text="@string/LocationLabel" />
+
+    <Button
+        android:id="@+id/InformationButton"
+        style="@style/NextButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/nextbutton"
+        android:text="@string/InformationLabel" />
+
+    <Button
+        android:id="@+id/PersonButton"
+        style="@style/NextButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/nextbutton"
+        android:text="@string/PersonLabel" />
+
+    <Button
+        android:id="@+id/TimeButton"
+        style="@style/NextButtonText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/nextbutton"
+        android:text="@string/TimeLabel" />
+
+</LinearLayout>

@@ -12,6 +12,19 @@
     <color name="GridBGColor">#86C1F8</color>
     <color name="EndBGColor">#86C1F8</color>
 
+    
+    <string name="LocationLabel">Location (Where)</string>
+    <string name="InformationLabel">Information (What)</string>
+    <string name="PersonLabel">Other Person (Who)</string>
+    <string name="TimeLabel">Time (When)</string>
+    <string name="INeedSomethingLabel">I need something</string>
+    <string name="IWantToEatLabel">I want to eat</string>
+    <string name="IWantToDoLabel">I want to do</string>
+    <string name="FeelingLabel">Feeling</string>
+    <string name="CommentLabel">Comment</string>
+    <string name="HurtLabel">Hurt/Pain</string>
+    <string name="CallLabel">Call Parents</string>
+
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,7 +52,7 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">2</item>
     </style>
-    
+
     <style name="NextButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -54,17 +67,19 @@
         <item name="android:shadowRadius">2</item>
     </style>
 
+    <string name="title_activity_grid">GridActivity</string>
     <string name="MySentenceLabel">My sentence:</string>
     <string name="UserSentenceLabel">Here is a random sentence the user will create...</string>
     <string name="SentenceInstruction">Insert something...</string>
     <string name="NextButtonLabel">NEXT</string>
     <string name="IconLabel">iconName</string>
-    
-    
     <string name="title_activity_end">EndActivity</string>
-    <string name="title_activity_grid">GridActivity</string>
     <string name="SayLabel">SAY FOR ME</string>
     <string name="AgainLabel">NEW SENTENCE</string>
-    
+    <string name="title_activity_want">WantActivity</string>
+    <string name="title_activity_statement">StatementActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_emergency">EmergencyActivity</string>
+    <string name="title_activity_question">QuestionActivity</string>
 
 </resources>
