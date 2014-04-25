@@ -37,7 +37,7 @@ public class ImageAdapter extends BaseAdapter {
 			// set value into textview
 			TextView textView = (TextView) gridView
 					.findViewById(R.id.grid_item_label);
-			textView.setText(moduleValues[position]);
+			textView.setText(getText(moduleValues[position]));
  
 			// set image based on selected text
 			ImageView imageView = (ImageView) gridView
@@ -208,6 +208,43 @@ public class ImageAdapter extends BaseAdapter {
 		return gridView;
 	}
  
+	public String getText(String asdf)
+	{
+		String fixed = "";
+		
+		if(asdf == "waterBottle")
+			fixed = "water bottle";
+		else if(asdf == "pieceOfPaper")
+			fixed = "piece of paper";
+		else if(asdf == "goPlay")
+			fixed = "go play";
+		else if(asdf == "getAToy")
+			fixed = "get a toy";
+		else if(asdf == "doHomework")
+			fixed = "do homework";
+		else if(asdf == "callAFriend")
+			fixed = "call a friend";
+		else if(asdf == "goHome")
+			fixed = "go home";
+		else if(asdf == "buyThis")
+			fixed = "buy this";
+		else if(asdf == "stayHere")
+			fixed = "stay here";
+		else if(asdf == "classStart")
+			fixed = "class start";
+		else if(asdf == "schoolEnd")
+			fixed = "school end";
+		else if(asdf == "momComeHome")
+			fixed = "mom coming home";
+		else if(asdf == "napTime")
+			fixed = "nap time";
+		else
+			fixed = asdf;
+		
+		return fixed;
+	}
+	
+	
 	@Override
 	public int getCount() {
 		return moduleValues.length;

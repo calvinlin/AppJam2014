@@ -64,8 +64,8 @@ public class Data {
 		else if(name.equals("objects"))
 		{
 			s = new String[Objects.values().length];
-			for(int i = 0; i< Objects.values().length;i++)
-				s[i] = Objects.values()[i].toString();
+			for(int i = 0; i< Event.values().length;i++)
+				s[i] = Event.values()[i].toString();
 		}
 		return s;
 	}

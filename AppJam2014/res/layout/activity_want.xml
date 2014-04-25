@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/INeedSomethingButton"
         style="@style/VariationButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
@@ -42,7 +42,7 @@
     <Button
         android:id="@+id/IWantToEatButton"
         style="@style/VariationButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
@@ -53,7 +53,7 @@
     <Button
         android:id="@+id/IWantToDoButton"
         style="@style/VariationButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"

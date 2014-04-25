@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="i can TALK"
             android:layout_gravity="fill_horizontal"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textColor="@color/White"
             android:textSize="70sp"
             android:paddingTop="23dp" />
@@ -34,7 +34,7 @@
     <Button
         android:id="@+id/QuestionButton"
         style="@style/ButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginBottom="1dp"
@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/WantButton"
         style="@style/ButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="1dp"
@@ -56,7 +56,7 @@
     <Button
         android:id="@+id/StatementButton"
         style="@style/ButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="1dp"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/EmergencyButton"
         style="@style/EmergencyButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_gravity="center|bottom"
         android:layout_weight="0.1"
         android:background="@drawable/redbutton"

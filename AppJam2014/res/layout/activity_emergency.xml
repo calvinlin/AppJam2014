@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="15dp"
-            android:text="Statement..."
+            android:text="Emergency..."
             android:textColor="@color/White"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/HurtButton"
         style="@style/VariationButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
@@ -42,7 +42,7 @@
     <Button
         android:id="@+id/CallButton"
         style="@style/VariationButtonText"
-        android:layout_width="500dp"
+        android:layout_width="700dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"

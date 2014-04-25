@@ -3,6 +3,7 @@
     android:layout_width="99dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_gravity="center_vertical"
     android:padding="5dp" >
 
     <ImageView
@@ -10,6 +11,7 @@
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:paddingLeft="7dp"
+        android:gravity="center"
         android:paddingRight="7dp" >
     </ImageView>
 
@@ -21,6 +23,7 @@
         android:text="@string/IconLabel"
         android:gravity="center"
         android:textColor="@color/Black"
+        android:textStyle="bold"
         android:textSize="15sp" >
     </TextView>
 
