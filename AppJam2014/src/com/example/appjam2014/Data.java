@@ -69,9 +69,10 @@ public class Data {
 		ArrayList<String> combinedArray = new ArrayList<String>();
 		for(String[] array: arrays)
 		{
-			combinedArray.addAll(new ArrayList<String>(Arrays.asList(array)));
+			if(array != null)
+				combinedArray.addAll(new ArrayList<String>(Arrays.asList(array)));
 		}
-		return (String[]) combinedArray.toArray();
+		return combinedArray.toArray(new String[10]);
 	}
 	public enum WANT01{
 		INEED("I need");
