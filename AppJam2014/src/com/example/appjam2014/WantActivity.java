@@ -27,7 +27,8 @@ public class WantActivity extends Activity implements OnClickListener{
 
 		a.setOnClickListener(this);
 		b.setOnClickListener(this);
-		c.setOnClickListener(this);	
+		c.setOnClickListener(this);
+				
 	}
 
 	@Override
@@ -57,4 +58,6 @@ public class WantActivity extends Activity implements OnClickListener{
 			break;
 		}
 	}
+
+
 }

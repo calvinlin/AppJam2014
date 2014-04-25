@@ -62,6 +62,8 @@ public class ImageAdapter extends BaseAdapter {
 			}else if (mobile.equals("dad")) {
 				imageView.setImageResource(R.drawable.dad);
 			}else if (mobile.equals("friend")) {
+				imageView.setImageResource(R.drawable.friend);
+			}else if (mobile.equals("neighbor")) {
 				imageView.setImageResource(R.drawable.neighbor);
 			}else if (mobile.equals("school")) {
 				imageView.setImageResource(R.drawable.school);
