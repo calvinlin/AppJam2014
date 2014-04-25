@@ -89,9 +89,9 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String getAvailableWords()
+		public static String[] getAvailableWords()
 		{
-			return "food";
+			return getAll("food");
 		}
 		// returns an array list of enum values, e.g. I need.
 		// if there were two enums, it would also return the value of the second one
@@ -120,7 +120,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("food");
 		}
@@ -149,7 +149,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("food");
 		}
@@ -178,7 +178,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			ArrayList<String[]> wordArrays = new ArrayList<String[]>();
 			wordArrays.add(getAll("people"));
@@ -211,7 +211,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			ArrayList<String[]> wordArrays = new ArrayList<String[]>();
 			wordArrays.add(getAll("places"));
@@ -244,7 +244,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 ;
 			return getAll("people");
@@ -275,7 +275,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("event");
 		}
@@ -304,7 +304,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("feelings");
 		}
@@ -333,7 +333,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("feelings");
 		}
@@ -363,7 +363,7 @@ public class Data {
 			return template;
 		}
 		// returns the Enum of stuff that is appropriate for this template.
-		private static String[] getAvailableWords()
+		public static String[] getAvailableWords()
 		{
 			return getAll("bodyparts");
 		}

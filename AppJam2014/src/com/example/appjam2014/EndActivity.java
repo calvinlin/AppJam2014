@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.os.Build;
 
 // imports for Text to Speech (TTS)
@@ -20,10 +21,12 @@ import android.widget.EditText;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
 import android.content.Intent;
+
+import java.io.Serializable;
 import java.util.Locale;
 import android.widget.Toast;
 
-public class EndActivity extends Activity implements OnClickListener, OnInitListener{
+public class EndActivity extends Activity implements OnClickListener, OnInitListener, Serializable{
 	/* TEXT TO SPEECH DEPENDENCIES */
 	//TTS object
 	private TextToSpeech myTTS;
@@ -32,16 +35,20 @@ public class EndActivity extends Activity implements OnClickListener, OnInitList
 	/* ------------------------------ */
 
 	private Data data;
-
+	String complete;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_end);
 
+		Intent i = getIntent();
+		complete = (String)i.getSerializableExtra("finalSentence");
+		TextView completedSentence = (TextView) findViewById(R.id.CurrentSentence);
 		Button say = (Button)findViewById(R.id.SayButton);
 		Button again = (Button)findViewById(R.id.AgainButton);
 
+		completedSentence.setText(complete);
 		say.setOnClickListener(this);
 		again.setOnClickListener(this);
 
@@ -70,8 +77,7 @@ public class EndActivity extends Activity implements OnClickListener, OnInitList
 		case R.id.SayButton:
 			//get the text entered
 			//            String words = data.people.name();
-			String words = "I can talk.";
-			speakWords(words);
+			speakWords(complete);
 			break;
 		case R.id.AgainButton:
 			i = new Intent(this, TitleActivity.class);

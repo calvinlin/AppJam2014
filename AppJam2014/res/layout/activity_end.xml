@@ -15,20 +15,20 @@
         android:text="@string/MySentenceLabel"
         android:textSize="17sp" />
 
-    <!-- need to add sentence -->
-
-    <GridView
-        android:id="@+id/gridview"
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="100dp"
-        android:columnWidth="90dp"
-        android:gravity="center"
-        android:horizontalSpacing="5dp"
-        android:numColumns="3"
-        android:paddingTop="10dp"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="50dp" >
-    </GridView>
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/CurrentSentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/UserSentenceLabel"
+            android:textSize="25sp" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/SayButton"

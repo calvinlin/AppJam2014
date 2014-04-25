@@ -35,6 +35,7 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 	int category = 0;
 	int variation = 0;
 	String variationName = "";
+	String[] s;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,50 +46,52 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		category = (Integer) i.getSerializableExtra("category");
 		variation = (Integer) i.getSerializableExtra("variation");
 		Toast.makeText(getApplicationContext(), Integer.toString(category)+Integer.toString(variation), 
-				   Toast.LENGTH_LONG).show();
-		
-		
+				Toast.LENGTH_LONG).show();
+
+
 		TextView sent = (TextView)findViewById(R.id.CurrentSentence);
 		TextView instruction = (TextView)findViewById(R.id.GridInstructions);
 
 		getInfo(category, variation);
 		sent.setText(sentence.getString());
 		instruction.setText("Pick a word:");
-		
+
 		Button next = (Button)findViewById(R.id.NextButton);
 		next.setOnClickListener(this);
-		
-//		String[] s = Data.getAll("something");
-//
-//		gv = (GridView) findViewById(R.id.gridView1);
-//
-//		gv.setAdapter(new ImageAdapter(this, s));
-//
-//		gv.setOnItemClickListener(new OnItemClickListener() 
-//		{
-//			public void onItemClick(AdapterView<?> parent, View v,
-//					int position, long id) {
-//				TextView text = (TextView) v.findViewById(R.id.grid_item_label);
-//				sentence.setBlank(text.getText().toString());
-//				//Data.setItem((TextView) v.findViewById(R.id.grid_item_label)).getText();
-//				Toast.makeText(
-//						getApplicationContext(),
-//						((TextView) v.findViewById(R.id.grid_item_label))
-//						.getText(), Toast.LENGTH_SHORT).show();
-//				selected = true;
-//			}
-//		});
+
+		//String[] s = Data.getAll("something");
+
+		gv = (GridView) findViewById(R.id.gridView1);
+
+		gv.setAdapter(new ImageAdapter(this, s));
+
+		gv.setOnItemClickListener(new OnItemClickListener() 
+		{
+			public void onItemClick(AdapterView<?> parent, View v,
+					int position, long id) {
+				TextView text = (TextView) v.findViewById(R.id.grid_item_label);
+
+				sentence.setBlank(text.getText().toString());
+
+				Toast.makeText(
+						getApplicationContext(),
+						((TextView) v.findViewById(R.id.grid_item_label))
+						.getText(), Toast.LENGTH_SHORT).show();
+				selected = true;
+			}
+		});
 	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		
+
 		Sentence s;
-		
+
 		if((v.getId() == R.id.NextButton) && (selected == true))
 		{
 			Intent i = new Intent(this, EndActivity.class);
+			i.putExtra("finalSentence", sentence.getString());
 			startActivity(i);
 		}
 	}
@@ -96,7 +99,7 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 	public String getInfo(int category, int variation)
 	{
 		String stuff = "";
-		
+
 		// for each variation, the sentence object was updated with the starter 
 		// fragment info using sendSentence().
 		switch(category)
@@ -104,35 +107,65 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		case 1:	//question
 			switch(variation)
 			{
-				case 1: sentence.sendSentence(Data.Q01.getFragments()); break;
-				case 2: sentence.sendSentence(Data.Q02.getFragments()); break;
-				case 3: sentence.sendSentence(Data.Q03.getFragments()); break;
-				case 4: sentence.sendSentence(Data.Q04.getFragments()); break;
+			case 1: 
+				sentence.sendSentence(Data.Q01.getFragments());
+				s = Data.Q01.getAvailableWords();
+				break;
+			case 2:
+				sentence.sendSentence(Data.Q02.getFragments());
+				s = Data.Q02.getAvailableWords();
+				break;
+			case 3: 
+				sentence.sendSentence(Data.Q03.getFragments()); 
+				s = Data.Q03.getAvailableWords();
+				break;
+			case 4: 
+				sentence.sendSentence(Data.Q04.getFragments()); 
+				s = Data.Q04.getAvailableWords();
+				break;
 			}
 			break;
 		case 2:	//want
 			switch(variation)
 			{
-				case 1: sentence.sendSentence(Data.WANT01.getFragments()); break;
-				case 2: sentence.sendSentence(Data.WANT02.getFragments()); break;
-				case 3: sentence.sendSentence(Data.WANT03.getFragments()); break;
+			case 1:
+				sentence.sendSentence(Data.WANT01.getFragments()); 
+				s = Data.WANT01.getAvailableWords();
+				break;
+			case 2:
+				sentence.sendSentence(Data.WANT02.getFragments()); 
+				s = Data.WANT02.getAvailableWords();
+				break;
+			case 3: 
+				sentence.sendSentence(Data.WANT03.getFragments()); 
+				s = Data.WANT03.getAvailableWords();
+				break;
 			}
 			break;
 		case 3:	//statement
 			switch(variation)
 			{
-				case 1: sentence.sendSentence(Data.STATE01.getFragments()); break;
-				case 2: sentence.sendSentence(Data.STATE02.getFragments()); break;
+			case 1: 
+				sentence.sendSentence(Data.STATE01.getFragments()); 
+				s = Data.STATE01.getAvailableWords();
+				break;
+			case 2: 
+				sentence.sendSentence(Data.STATE02.getFragments());
+				s = Data.STATE02.getAvailableWords();
+				break;
 			}
 			break;
 		case 4:	//emergency
 			switch(variation)
 			{
-				case 1: sentence.sendSentence(Data.HELP01.getFragments()); break;
+			case 1: 
+				sentence.sendSentence(Data.HELP01.getFragments());
+				s = Data.HELP01.getAvailableWords();
+				break;
 			}
 			break;
 		}
-		
+
 		return stuff;
 	}
 }
