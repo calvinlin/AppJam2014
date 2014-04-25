@@ -75,7 +75,8 @@ public class Data {
 		return combinedArray.toArray(new String[10]);
 	}
 	public enum WANT01{
-		INEED("I need");
+		INEED("I need"),
+		PERIOD(".");
 		
 		private String template;
 		// constructor needed to automatically associate the string to the enum INEED
@@ -292,7 +293,9 @@ public class Data {
 	};
 	
 	public enum STATE01{
-		IFEEL("I feel");
+		IFEEL("I feel"),
+		PERIOD(".");
+
 		
 		private String template;
 		STATE01(String template)
@@ -321,7 +324,9 @@ public class Data {
 	};
 	
 	public enum STATE02{
-		IAM("I am");
+		IAM("I am"),
+		PERIOD(".");
+
 		
 		private String template;
 		STATE02(String template)
@@ -351,7 +356,7 @@ public class Data {
 	
 	public enum HELP01{
 		MY("my"),
-		HURTS("hurts");
+		HURTS("hurts.");
 		
 		private String template;
 		HELP01(String template)
