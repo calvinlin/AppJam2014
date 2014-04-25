@@ -158,7 +158,7 @@ public class Data {
 		// returns the Enum of stuff that is appropriate for this template.
 		public static String[] getAvailableWords()
 		{
-			return getAll("food");
+			return getAll("actions");
 		}
 		public static ArrayList<String> getFragments()
 		{
