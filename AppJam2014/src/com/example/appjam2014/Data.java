@@ -9,9 +9,8 @@ public class Data {
 	Feelings feeling;
 	BodyParts bodyPart;
 
-	class Objects {
-		Food food;
-	};
+
+	
 
 	Actions action;
 	
@@ -59,6 +58,12 @@ public class Data {
 		else if(name.equals("event"))
 		{
 			s = new String[Event.values().length];
+			for(int i = 0; i< Event.values().length;i++)
+				s[i] = Event.values()[i].toString();
+		}
+		else if(name.equals("objects"))
+		{
+			s = new String[Objects.values().length];
 			for(int i = 0; i< Event.values().length;i++)
 				s[i] = Event.values()[i].toString();
 		}
