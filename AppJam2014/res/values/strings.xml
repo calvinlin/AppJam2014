@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AppJam2014</string>
+    <string name="app_name">I Can Talk</string>
     <string name="action_settings">Settings</string>
     <string name="QuestionButtonLabel">QUESTION</string>
     <string name="WantButtonLabel">WANT</string>
     <string name="StatementButtonLabel">STATEMENT</string>
     <string name="EmergencyButtonLabel">E M E R G E N C Y</string>
 
-    <color name="TitleBGColor">#86C1F8</color>
+    <color name="TitleBGColor">#FFFFFF</color>
     <color name="GridBGColor">#86C1F8</color>
     <color name="EndBGColor">#86C1F8</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
 
     <string name="LocationLabel">Location (Where)</string>
     <string name="InformationLabel">Information (What)</string>
@@ -29,7 +31,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_margin">7dp</item>
+        <item name="android:layout_margin">0dp</item>
         <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">#000000</item>
@@ -43,7 +45,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_margin">7dp</item>
+        <item name="android:layout_margin">0dp</item>
         <item name="android:textSize">15dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">#000000</item>
@@ -71,8 +73,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_margin">1dp</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">25dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">#000000</item>
         <item name="android:shadowDx">1</item>

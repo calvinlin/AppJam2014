@@ -27,14 +27,11 @@ public class QuestionActivity extends Activity implements OnClickListener {
 		Button b = (Button)findViewById(R.id.InformationButton);
 		Button c = (Button)findViewById(R.id.PersonButton);
 		Button d = (Button)findViewById(R.id.TimeButton);
-		TextView instruction = (TextView)findViewById(R.id.Instruction);
 
 		a.setOnClickListener(this);
 		b.setOnClickListener(this);
 		c.setOnClickListener(this);
 		d.setOnClickListener(this);
-		
-		instruction.setText("Pick a type:");
 
 	}
 

@@ -24,12 +24,9 @@ public class EmergencyActivity extends Activity implements OnClickListener{
 		Button a = (Button)findViewById(R.id.HurtButton);
 		Button b = (Button)findViewById(R.id.CallButton);
 		TextView sentence = (TextView)findViewById(R.id.CurrentSentence);
-		TextView instruction = (TextView)findViewById(R.id.GridInstructions);
 
 		a.setOnClickListener(this);
 		b.setOnClickListener(this);
-		instruction.setText("something");
-				
 	}
 
 	@Override
@@ -47,7 +44,7 @@ public class EmergencyActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.CallButton:
 			i = new Intent(Intent.ACTION_CALL);
-			i.setData(Uri.parse("tel:123456780"));
+			i.setData(Uri.parse("tel:9493027378"));
 			startActivity(i);
 			break;
 		}

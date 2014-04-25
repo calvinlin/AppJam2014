@@ -51,6 +51,8 @@ public class ImageAdapter extends BaseAdapter {
 				imageView.setImageResource(R.drawable.you);
 			} else if (mobile.equals("him")) {
 				imageView.setImageResource(R.drawable.him);
+			} else if (mobile.equals("her")) {
+				imageView.setImageResource(R.drawable.her);
 			}else if (mobile.equals("teacher")) {
 				imageView.setImageResource(R.drawable.teacher);
 			}else if (mobile.equals("student")) {
@@ -73,7 +75,7 @@ public class ImageAdapter extends BaseAdapter {
 				imageView.setImageResource(R.drawable.bedroom);
 			}else if (mobile.equals("kitchen")) {
 				imageView.setImageResource(R.drawable.kitchen);
-			}else if (mobile.equals("rstaurant")) {
+			}else if (mobile.equals("restaurant")) {
 				imageView.setImageResource(R.drawable.restaurant);
 			}else if (mobile.equals("store")) {
 				imageView.setImageResource(R.drawable.store);

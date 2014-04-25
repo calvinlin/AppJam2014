@@ -6,65 +6,36 @@
     android:orientation="vertical"
     tools:context="com.example.appjam2014.GridActivity" >
 
-    <TextView
-        android:id="@+id/MySentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
-        android:padding="3dp"
-        android:textStyle="bold"
-        android:text="@string/MySentenceLabel"
-        android:textSize="15sp" />
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="100dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
+        android:layout_weight="0.20"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/MySentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/MySentenceLabel"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/CurrentSentence"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
             android:text="@string/UserSentenceLabel"
-            android:textSize="25sp" />
-    </RelativeLayout>
-
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:background="@android:color/black" />
-
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="30dp"
-        android:paddingTop="5dp" >
-
-        <Button
-            android:id="@+id/NextButton"
-            style="@style/NextButtonText"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:background="@drawable/nextbutton"
-            android:text="@string/NextButtonLabel" />
-
-        <TextView
-            android:id="@+id/GridInstructions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/NextButton"
-            android:paddingLeft="5dp"
-            android:text="@string/SentenceInstruction"
-            android:textSize="15sp" />
-
-    </RelativeLayout>
+            android:textColor="@color/Black"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <!--
          <GridView
@@ -81,15 +52,39 @@
     </GridView>
     -->
 
-    <GridView
-        android:id="@+id/gridView1"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:columnWidth="100dp"
-        android:gravity="center"
-        android:numColumns="3"
-        android:horizontalSpacing="5dp"
-        android:verticalSpacing="20dp" >
-    </GridView>
+        android:layout_height="100dp"
+        android:layout_weight="0.80"
+        android:orientation="vertical"
+        android:background="@color/White" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/GridInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:text="@string/SentenceInstruction"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/White"
+            android:columnWidth="100dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:verticalSpacing="5dp" >
+        </GridView>
+    </LinearLayout>
 
 </LinearLayout>

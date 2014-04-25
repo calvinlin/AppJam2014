@@ -8,58 +8,70 @@
     android:orientation="vertical"
     tools:context="com.example.appjam2014.TitleActivity" >
 
-<!--     <ImageView
-        android:id="@+id/keylifeplanner"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/keylifeplanner" /> -->
+        android:layout_weight="0.12"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/ICanTalk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="i can TALK"
+            android:layout_gravity="fill_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="70sp"
+            android:paddingTop="23dp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/QuestionButton"
         style="@style/ButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="0.27"
         android:background="@drawable/purplebutton"
         android:text="@string/QuestionButtonLabel" />
 
     <Button
         android:id="@+id/WantButton"
         style="@style/ButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:layout_weight="0.27"
         android:background="@drawable/bluebutton"
         android:text="@string/WantButtonLabel" />
 
     <Button
         android:id="@+id/StatementButton"
         style="@style/ButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:layout_weight="0.27"
         android:background="@drawable/greenbutton"
         android:text="@string/StatementButtonLabel" />
 
-    <FrameLayout
-        android:id="@+id/mLlayoutBottomButton"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:orientation="vertical" >
-
-        <Button
-            android:id="@+id/EmergencyButton"
-            style="@style/EmergencyButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/redbutton"
-            android:longClickable="false"
-            android:text="@string/EmergencyButtonLabel" />
-
-    </FrameLayout>
+    <Button
+        android:id="@+id/EmergencyButton"
+        style="@style/EmergencyButtonText"
+        android:layout_width="500dp"
+        android:layout_gravity="center|bottom"
+        android:layout_weight="0.1"
+        android:background="@drawable/redbutton"
+        android:longClickable="false"
+        android:text="@string/EmergencyButtonLabel" />
 
 </LinearLayout>

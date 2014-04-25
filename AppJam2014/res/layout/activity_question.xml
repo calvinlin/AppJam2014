@@ -6,51 +6,70 @@
     android:orientation="vertical"
     tools:context="com.example.appjam2014.QuestionActivity" >
 
-    <TextView
-        android:id="@+id/Instruction"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
-        android:padding="3dp"
-        android:text="@string/MySentenceLabel"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_weight="0.12"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Question..."
+            android:textColor="@color/White"
+            android:paddingTop="15dp"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/LocationButton"
-        style="@style/NextButtonText"
-        android:layout_width="match_parent"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/nextbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.22"
+        android:background="@drawable/purplebutton"
         android:text="@string/LocationLabel" />
 
     <Button
         android:id="@+id/InformationButton"
-        style="@style/NextButtonText"
-        android:layout_width="match_parent"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/nextbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.22"
+        android:background="@drawable/purplebutton"
         android:text="@string/InformationLabel" />
 
     <Button
         android:id="@+id/PersonButton"
-        style="@style/NextButtonText"
-        android:layout_width="match_parent"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/nextbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.22"
+        android:background="@drawable/purplebutton"
         android:text="@string/PersonLabel" />
 
     <Button
         android:id="@+id/TimeButton"
-        style="@style/NextButtonText"
-        android:layout_width="match_parent"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/nextbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.22"
+        android:background="@drawable/purplebutton"
         android:text="@string/TimeLabel" />
 
 </LinearLayout>

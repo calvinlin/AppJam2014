@@ -6,34 +6,48 @@
     android:orientation="vertical"
     tools:context="com.example.appjam2014.StatementActivity" >
 
-    <TextView
-        android:id="@+id/Instruction"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
-        android:padding="3dp"
-        android:text="@string/MySentenceLabel"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_weight="0.06"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
-
-        <Button
-            android:id="@+id/FeelingButton"
-            style="@style/NextButtonText"
+        <TextView
+            android:id="@+id/Statement"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/FeelingLabel" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:text="Statement..."
+            android:textColor="@color/White"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/CommentButton"
-            style="@style/NextButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/CommentLabel" />
+    <Button
+        android:id="@+id/FeelingButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.47"
+        android:background="@drawable/greenbutton"
+        android:text="@string/FeelingLabel" />
+
+    <Button
+        android:id="@+id/CommentButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.47"
+        android:background="@drawable/greenbutton"
+        android:text="@string/CommentLabel" />
 
 </LinearLayout>

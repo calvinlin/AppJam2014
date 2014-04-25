@@ -2,34 +2,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:background="@color/GridBGColor"
     android:orientation="vertical"
     tools:context="com.example.appjam2014.EmergencyActivity" >
 
-    <TextView
-        android:id="@+id/GridInstructions"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/SentenceInstruction"
-        android:textSize="15sp" />
+        android:layout_weight="0.06"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
-        <Button
-            android:id="@+id/HurtButton"
-            style="@style/NextButtonText"
+        <TextView
+            android:id="@+id/Statement"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/HurtLabel" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:text="Statement..."
+            android:textColor="@color/White"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/CallButton"
-            style="@style/NextButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/CallLabel" />
+    <Button
+        android:id="@+id/HurtButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.47"
+        android:background="@drawable/redbutton"
+        android:text="@string/HurtLabel" />
+
+    <Button
+        android:id="@+id/CallButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.47"
+        android:background="@drawable/redbutton"
+        android:text="@string/CallLabel" />
 
 </LinearLayout>

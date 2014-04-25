@@ -21,7 +21,7 @@ import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class GridActivity extends Activity implements OnClickListener, Serializable{
+public class GridActivity extends Activity implements Serializable{
 
 	/**
 	 * 
@@ -30,7 +30,6 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 	GridView gv;
 	Sentence sentence = new Sentence();
 	Data d;
-	boolean selected = false;
 	String info = "info";
 	int category = 0;
 	int variation = 0;
@@ -45,9 +44,6 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		Intent i = getIntent();
 		category = (Integer) i.getSerializableExtra("category");
 		variation = (Integer) i.getSerializableExtra("variation");
-		Toast.makeText(getApplicationContext(), Integer.toString(category)+Integer.toString(variation), 
-				Toast.LENGTH_LONG).show();
-
 
 		TextView sent = (TextView)findViewById(R.id.CurrentSentence);
 		TextView instruction = (TextView)findViewById(R.id.GridInstructions);
@@ -55,11 +51,6 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 		getInfo(category, variation);
 		sent.setText(sentence.getString());
 		instruction.setText("Pick a word:");
-
-		Button next = (Button)findViewById(R.id.NextButton);
-		next.setOnClickListener(this);
-
-		//String[] s = Data.getAll("something");
 
 		gv = (GridView) findViewById(R.id.gridView1);
 
@@ -70,30 +61,17 @@ public class GridActivity extends Activity implements OnClickListener, Serializa
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
 				TextView text = (TextView) v.findViewById(R.id.grid_item_label);
-
 				sentence.setBlank(text.getText().toString());
-
-				Toast.makeText(
-						getApplicationContext(),
-						((TextView) v.findViewById(R.id.grid_item_label))
-						.getText(), Toast.LENGTH_SHORT).show();
-				selected = true;
+				next();
 			}
 		});
 	}
-
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
-		Sentence s;
-
-		if((v.getId() == R.id.NextButton) && (selected == true))
-		{
-			Intent i = new Intent(this, EndActivity.class);
-			i.putExtra("finalSentence", sentence.getString());
-			startActivity(i);
-		}
+	
+	public void next()
+	{
+		Intent i = new Intent(this, EndActivity.class);
+		i.putExtra("finalSentence", sentence.getString());
+		startActivity(i);
 	}
 
 	public String getInfo(int category, int variation)

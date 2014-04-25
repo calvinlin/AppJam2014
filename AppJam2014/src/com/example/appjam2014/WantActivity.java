@@ -24,13 +24,10 @@ public class WantActivity extends Activity implements OnClickListener{
 		Button a = (Button)findViewById(R.id.INeedSomethingButton);
 		Button b = (Button)findViewById(R.id.IWantToEatButton);
 		Button c = (Button)findViewById(R.id.IWantToDoButton);
-		TextView instruction = (TextView)findViewById(R.id.Instruction);
 
 		a.setOnClickListener(this);
 		b.setOnClickListener(this);
-		c.setOnClickListener(this);
-		instruction.setText("Pick a type:");
-				
+		c.setOnClickListener(this);	
 	}
 
 	@Override
@@ -60,6 +57,4 @@ public class WantActivity extends Activity implements OnClickListener{
 			break;
 		}
 	}
-
-
 }

@@ -2,10 +2,12 @@ package com.example.appjam2014;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class TitleActivity extends Activity implements OnClickListener{
 
@@ -14,6 +16,10 @@ public class TitleActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_title);
 
+		TextView title1 = (TextView)findViewById(R.id.ICanTalk);
+		Typeface type = Typeface.createFromAsset(getAssets(),"fcb.ttf"); 
+		   
+		title1.setTypeface(type);		
 		
 		//sets up buttons
 		Button question = (Button)findViewById(R.id.QuestionButton);

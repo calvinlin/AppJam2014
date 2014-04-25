@@ -2,49 +2,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/EndBGColor"
+    android:background="@color/White"
     android:orientation="vertical"
     tools:context="com.example.appjam2014.EndActivity" >
 
-    <TextView
-        android:id="@+id/MySentence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
-        android:text="@string/MySentenceLabel"
-        android:textSize="17sp" />
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="100dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
+        android:layout_weight="0.30"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/MySentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/MySentenceLabel"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/CurrentSentence"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
             android:text="@string/UserSentenceLabel"
-            android:textSize="25sp" />
-    </RelativeLayout>
+            android:textColor="@color/Black"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/SayButton"
         style="@style/ButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="60dp"
+        android:layout_gravity="center"
         android:layout_marginTop="14dp"
+        android:layout_weight="0.20"
         android:background="@drawable/bluebutton"
         android:text="@string/SayLabel" />
 
     <Button
         android:id="@+id/AgainButton"
         style="@style/ButtonText"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="90dp"
+        android:layout_gravity="center"
         android:layout_marginTop="14dp"
+        android:layout_weight="0.50"
         android:background="@drawable/greenbutton"
         android:text="@string/AgainLabel" />
 

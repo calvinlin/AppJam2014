@@ -22,11 +22,9 @@ public class StatementActivity extends Activity implements OnClickListener{
 
 		Button a = (Button)findViewById(R.id.FeelingButton);
 		Button b = (Button)findViewById(R.id.CommentButton);
-		TextView instruction = (TextView)findViewById(R.id.Instruction);
 
 		a.setOnClickListener(this);
 		b.setOnClickListener(this);
-		instruction.setText("Pick a type:");
 				
 	}
 

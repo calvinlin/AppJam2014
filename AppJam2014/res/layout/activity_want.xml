@@ -6,43 +6,59 @@
     android:orientation="vertical"
     tools:context="com.example.appjam2014.WantActivity" >
 
-    <TextView
-        android:id="@+id/Instruction"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="10dp"
-        android:padding="3dp"
-        android:text="@string/MySentenceLabel"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_weight="0.08"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
-
-        <Button
-            android:id="@+id/INeedSomethingButton"
-            style="@style/NextButtonText"
+        <TextView
+            android:id="@+id/Want"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/INeedSomethingLabel" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="15dp"
+            android:text="Want..."
+            android:textColor="@color/White"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/IWantToEatButton"
-            style="@style/NextButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/IWantToEatLabel" />
+    <Button
+        android:id="@+id/INeedSomethingButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.31"
+        android:background="@drawable/bluebutton"
+        android:text="@string/INeedSomethingLabel" />
 
-        <Button
-            android:id="@+id/IWantToDoButton"
-            style="@style/NextButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/nextbutton"
-            android:text="@string/IWantToDoLabel" />
+    <Button
+        android:id="@+id/IWantToEatButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.31"
+        android:background="@drawable/bluebutton"
+        android:text="@string/IWantToEatLabel" />
+
+    <Button
+        android:id="@+id/IWantToDoButton"
+        style="@style/VariationButtonText"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.31"
+        android:background="@drawable/bluebutton"
+        android:text="@string/IWantToDoLabel" />
 
 </LinearLayout>
