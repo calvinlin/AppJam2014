@@ -25,6 +25,12 @@ public class Data {
 			for(int i = 0; i< People.values().length;i++)
 				s[i] = People.values()[i].toString();
 		}
+		else if(name.equals("objects"))
+		{
+			s = new String[Objects.values().length];
+			for(int i = 0; i< Objects.values().length;i++)
+				s[i] = Objects.values()[i].toString();
+		}
 		else if(name.equals("places"))
 		{
 			s = new String[Places.values().length];
@@ -61,12 +67,7 @@ public class Data {
 			for(int i = 0; i< Event.values().length;i++)
 				s[i] = Event.values()[i].toString();
 		}
-		else if(name.equals("objects"))
-		{
-			s = new String[Objects.values().length];
-			for(int i = 0; i< Event.values().length;i++)
-				s[i] = Event.values()[i].toString();
-		}
+
 		return s;
 	}
 	public static String[] joinArray(ArrayList<String[]> arrays)
@@ -411,20 +412,7 @@ enum BodyParts {
 };
 
 enum Objects {
-	toy, phone, pencil, laptop, jacket, shirt, shoe, underwear, waterBottle("water bottle"), pieceOfPaper, book;
-	private String objName;
-	Objects(String name)
-	{
-		objName = name;
-	}
-	// IMPLEMENT **********************************
-	Objects()
-	{
-		objName = "";
-	}
-	String getName(){
-		return objName;
-	}
+	toy, phone, pencil, laptop, jacket, shirt, shoe, underwear, waterBottle, pieceOfPaper, book
 };
 
 enum Actions {
