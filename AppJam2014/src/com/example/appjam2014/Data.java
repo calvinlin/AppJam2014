@@ -98,7 +98,7 @@ public class Data {
 		// returns the Enum of stuff that is appropriate for this template.
 		public static String[] getAvailableWords()
 		{
-			return getAll("food");
+			return getAll("objects");
 		}
 		// returns an array list of enum values, e.g. I need.
 		// if there were two enums, it would also return the value of the second one
